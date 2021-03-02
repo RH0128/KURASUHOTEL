@@ -1,0 +1,777 @@
+@charset UTF-8;
+
+/* ================================================ */
+/*              ここからサイト全体設定                */
+/* ================================================ */
+
+
+html{
+	font-size: 100%;
+}
+
+body {
+	font-size: 13px;
+	line-height: 1.6;
+	color: #000000; 
+	background-color:#fff;
+    font-family:  YuGothic,'Yu Gothic', Osaka, sans-serif, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    }
+
+a {
+	text-decoration: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+/* ================================================ */
+/*ハンバーガメニュー*/ 
+/* ================================================ */
+
+header {
+  padding:15px 15px;
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+#nav-content li{
+  color: black;
+  border-left: solid 8px #000000;/*左側の線*/
+  background: #ffffff;/*背景色*/
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.8em;
+  list-style-type: none!important;
+}
+
+#nav-content a{
+	color:black;
+}
+
+
+/*===============================================
+PC : 画面の横幅が769px以上
+=================================================*/
+@media screen and (min-width: 768px){
+
+/*ハンバーガーメニューを非表示に*/
+header{
+	display:none;
+
+}
+
+#nav-open {
+    display:none;
+  }
+
+}
+
+/* ================================================ */
+/*header*/
+/* ================================================ */
+
+.logo {
+	width: 400px;
+	margin-top: 14px;
+	
+}
+
+.logo-img img{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform: .3s ease-in-out;
+    transform:  .3s ease-in-out;
+}
+
+.logo-img img:hover{
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
+
+.main-nav {
+	display: flex;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-top: 34px;
+}
+
+.main-nav li{
+	margin-left: 36px;
+}
+
+.main-nav a{
+	color:#432;
+}
+
+.main-nav a:hover{
+	color:#ffffff;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.wrapper {
+    max-width: 1100px
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+
+/* ================================================ */
+/*main visual*/
+/* ================================================ */
+
+.main-image {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.main-image h2 {
+	font-size: 48px;
+	text-align: center;
+	padding-top:100px;
+}
+
+.main-image h3 {
+	font-size: 18px;
+	text-align: center;
+	margin: 10px 0 42px;
+}
+
+.button{
+	font-size: 14px;
+	background: #ffffff;
+	color: #000000;
+	padding: 18px 32px;
+	 -webkit-transition: all .1.5s;
+    transition: all 0.5s;
+    }
+
+ 
+.button:hover {
+    background: #000000;
+    color: #ffffff;
+    }
+
+/*背景指定*/
+.big-bg {
+	background-size: cover;
+	background-position: center top; 
+	background-repeat: no-repeat;
+	vertical-align: top;
+}
+
+#home{
+	background-image: url(images/mainphoto.png);
+	min-height: 100vh;
+	position: relative;
+}
+
+.SNS{
+	position: absolute;
+	top: 0;
+    left: 0;
+    padding: 90px 60px;
+}
+
+.sns-btn{
+	padding:0 5px;
+}
+
+
+.SNS img{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform: .3s ease-in-out;
+    transform:  .3s ease-in-out;
+}
+
+
+.SNS img:hover{
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
+
+/* ================================================ */
+/*コンセプト*/
+/* ================================================ */
+
+.concept-wrapper {
+    display: flex;
+	justify-content: space-between;
+	background-color: #e3d9ca;
+	background-size: cover;
+}
+
+.concept-wrapper h4{
+	margin: 10px 0px 60px 0px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.concent-wrapper p {
+	font-size: 13px;
+	text-align: center;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+.concept-message {
+	margin: 0 auto;
+	padding: 50px;
+}
+
+/* ================================================ */
+/*お知らせ*/
+/* ================================================ */
+
+.news h4{
+	margin:35px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.news{
+     text-align: center;
+     padding: 30px;
+}
+
+.news-comment{
+	display: inline-block;
+	padding: 20px;
+}
+
+
+dl{
+	width:500px;
+}
+
+dt{
+	border-bottom:1px solid #ccc; 
+	float:left;
+	padding:10px 5px;
+}
+
+dd{
+	border-bottom:1px solid #ccc; 
+	text-align: left;
+	margin-left:100px;
+	padding:10px 5px;
+}
+
+.news a{
+	color:#432;
+}
+
+.news a:hover{
+	color:#9a7c61;
+}
+
+.news-button {
+	font-size: 14px;
+	background: #ffffff;
+	color: #000000;
+	padding: 18px 32px ;
+	margin: 30px 0px;
+	display: inline-block;
+	border: 1px solid;
+} 
+
+.news-button :hover {
+    background: #000000;
+    color: #9a7c61;
+}
+
+
+/* ================================================ */
+/*ホテルタイプ一覧*/
+/* ================================================ */
+
+.hotel {
+    background-color: #e3d9ca;
+	background-size: cover;
+}
+
+
+
+.hotel h4{
+	margin:35px 35px;
+	padding: 70px 0px 0px 0px ;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+.hotel h5{
+	margin:30px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.hotel img{
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    padding: 30px 30px;
+}
+
+
+.hotel-button {
+	font-size: 14px;
+	background: #ffffff;
+	color: #000000;
+	padding: 18px 32px ;
+	margin: 10px 10px;
+	display: inline-block;
+	border: 1px solid;
+} 
+
+.hotel a:hover {
+    background: #ffffff;
+    color: #9a7c61;
+}
+
+.hotel-img {
+	background: #ffffff;
+}
+.hotel-img img{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease^ease-in-out;
+}
+
+.hotel-img img:hover {
+   opacity:  .8;
+} 
+
+.hoteltype1 p{
+	font-size: 13px;
+	text-align: justify;
+	display: block;
+	margin: 0 auto;
+}
+
+.hoteltype2 p{
+	font-size: 13px;
+	text-align: justify;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.hoteltype-wrapper{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	padding: 0px 0px 50px 0px ;
+}
+
+.hoteltype-wrapper p{
+	padding: 30px;
+	width: 500px;
+	word-wrap: normal;
+}
+
+/* ================================================ */
+/*tよくあるご質問*/
+/* ================================================ */
+
+.FAQ h4{
+	margin:70px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.FAQ h5{
+	margin: 0px 0px 20px 0px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.FAQ .grid{
+    text-align:center;
+	display: grid;
+	grid-gap: 80px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 50px;
+	padding: 0 90px 50px 90px;
+}
+
+.wrapper grid {
+	display: flex;
+	min-width:0;
+	min-height: 0;
+	overflow-x:auto;
+	overflow-y: hidden;
+}
+
+
+
+.FAQ p{
+   text-align: justify;
+}
+
+/* ================================================ */
+/*お問い合わせ*/
+/* ================================================ */
+
+.form {
+	background-image: url(images/お問い合わせ_bg.png);
+	min-height: 100vh;
+}
+
+.contact-wrapper {
+	padding: 0px 30%;
+}
+
+
+.form h4{
+	padding: 60px;
+	margin: 0px;
+	font-size: 30px;
+	text-align: center;
+}
+
+form div{
+	margin-bottom: 14px;
+}
+
+
+lavel {
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+	background: rgba(255,255,255,.7);
+	border: 1px #fff solid;
+	border-radius: 3px;
+	padding: 10px;
+	font-size: 13px;
+	width: 80%;
+}
+
+input[type="text"],
+input[type="email"],{
+	width: 100%;
+	max-width: 80%;
+}
+textarea{
+	width: 100%;
+	max-width: 800px;
+	height:150px;
+}
+
+input[type="submit"]{
+	border: none;
+	cursor: pointer;
+	line-height: 1;
+}
+
+
+/* ================================================ */
+/*フッター部分*/
+/* ================================================ */
+
+footer{
+	text-align: center;
+	padding: 50px 0px ;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+}
+
+/* ================================================ */
+/*              ここからメディアクエリ               */
+/* ================================================ */
+
+
+/*=============================================== 
+●tablet.css 画面の横幅が768pxまで 
+===============================================*/
+@media screen and (max-width: 768px){
+
+	/*header*/
+	.main-nav {
+		display:none;
+	}
+
+	.contact-wrapper {
+	    padding: 0px 30px; 
+	}
+
+
+
+}
+
+/*=============================================== 
+●tablet.css 画面の横幅が640pxまで 
+モバイル版
+===============================================*/
+@media screen and (max-width:640px){
+
+	/*header*/
+
+	.header-nav {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main-nav {
+		display:none;
+	}
+
+
+	/*main visual*/
+
+	.main-image{
+	  display: grid;
+	  place-items: center;
+	}
+
+	.main-image h2{
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.main-image h3{
+		font-size: 15px;
+		text-align: center;
+	}
+
+	#home{
+		background-image: url(images/mainphoto.png);
+		width: 100%;
+	    height: 200px;
+	    object-fit: cover;
+		vertical-align:bottom;
+		min-height: 70vh;
+
+	}
+
+	.sns-btn{
+	    width:30px;
+	}
+
+	.SNS {
+		padding:80px 15px;
+	}
+
+
+	/*コンセプト*/
+
+	.concept-wrapper h4{
+		margin: 10px 0px 60px 0px;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.concept-wrapper {
+		flex-direction: ;
+		align-items: center;
+		width: 100%;
+	}
+
+	.concept-img img {
+	    display: none;
+	}
+
+
+	/*お知らせ*/
+
+	.news {
+	    padding: 0px;
+	}
+
+	.news h4{
+		margin:70px 0px 50px 0px;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.news-comment{
+	     text-align: center;
+	     margin:0 auto;
+	}
+
+	dt{
+		border-bottom:0px solid #ccc; 
+		float: center;
+	}
+
+	dl{
+		float:center;
+		width:300px;
+	}
+
+	.news-button {
+		margin: 50px 0px;
+	}
+
+
+	/*ホテル一覧*/
+
+	.hotel h4{
+		margin:35px 35px;
+		padding: 70px 0px 0px 0px ;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.hotel h5{
+		margin:10px;
+		padding: 30px 0px 0px 0px ;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.hoteltype-wrapper {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.hoteltype-wrapper p{
+		padding: 30px ;
+		width: 300px;
+		word-wrap: normal;
+	}
+
+	.hotel img{
+		width: 100%;
+		height:auto;
+	    text-align: center;
+	    display: block;
+	    float: center;
+	    margin: 0 auto;
+	    padding: 30px 0px;
+	}
+
+	/*FAQ*/
+
+	.FAQ h4{
+		margin:70px 0px 50px 0px;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.FAQ .grid{
+		display: grid;
+		gap: 50px;
+		grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+		margin-bottom: 50px;
+		margin:0 auto;
+		padding: 30px 45px;
+		}
+
+	/*お問い合わせ*/
+
+	.form h4{
+		padding: 60px;
+		margin: 0px;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.contact-wrapper {
+	    padding: 0px 30px ; 
+	}
+
+	textarea{
+		width: 100%;
+		max-width: 90%;
+		height:150px;
+	}
+
+}	
+
+
+
+
