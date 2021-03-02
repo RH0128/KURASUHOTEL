@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!--文字コード-->
+	<meta charset="utf-8">
+
+	<!--ブラウザで表示されるタイトル-->
+	<title>KURASU HOTEL</title>
+
+	<!--スタイルシート-->
+	<link rel="stylesheet" href="reset.min.css" media="all">
+	<link rel="stylesheet" href="style.css" media="all">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<meta property="og:description" content="全国5箇所にある私たちのホテル「KURASUHOTEL」。「自宅」のように滞在を楽しんで頂きたいというコンセプトから、チェックアウトは14時まででOKです。とびきりの体験をしてみませんか。">
+	<meta property="og:title" content="KURASU HOTEL"> <meta property="og:type" content="WEBサイト">
+	<meta property="og:url" content="URL">
+	<meta property="og:image" content="images/mainphoto.png"> <meta property="og:site_name" content="KURASU HOTEL">
+	<meta property="og:description" content="全国5箇所にある私たちのホテル「KURASUHOTEL」。「自宅」のように滞在を楽しんで頂きたいというコンセプトから、チェックアウトは14時まででOKです。とびきりの体験をしてみませんか。">
+
+    <!-- JQuery読み込み -->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript">
+		
+    $(function() {
+ 
+       // 一旦hide()で隠してフェードインさせる
+       $('div').hide().fadeIn('slow');
+ 
+       });
+
+    $(function() {
+
+    ScrollReveal().reveal('.concept-message,.news,.hotel,.FAQ,.form',{
+    duration: 4300,
+    origin: 'bottom', 
+    distance: '250px',
+    mobile: true,
+    reset: false
+
+  });
+  });
+
+    </script>
+
+</head>
+
+<body>
+
+<!--ハンバーガーメニュー-->
+<header>
+   <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+      	    <li><a href="#"> HOME</a></li>
+      	    <li><a href="#"> 予約をする</a></li>
+      	    <li><a href="#"> コンセプト</a></li>
+	   	 	<li><a href="#"> お知らせ</a></li>
+	   	 	<li><a href="#"> ホテル一覧</a></li>
+	   	 	<li><a href="#"> よくあるご質問（FAQ)</a></li>
+	   	 	<li><a href="#"> お問い合わせ</a></li>
+	   	 	<li><a href="#"> 公式SNS</a></li>
+	   	 	<li><a href="#"> 求人情報</a></li>       	
+      </div>
+   </div>
+  </header>
+  <!--ハンバーガーメニュー-->
+
+   <div id="home" class="big-bg">
+
+   <!-- ヘッダー-->
+   <header class="header-nav wrapper">
+	   <h1><a href="index.html"><figure class="logo-img" href="#"><img class="logo" src="images/KURASUHOTEL_logo.png" alt="暮らすホテル"></figure></a></h1>
+	   <nav>
+	   	 <ul class="main-nav">
+	   	 	<li><a href="#"> コンセプト</a></li>
+	   	 	<li><a href="#"> お知らせ</a></li>
+	   	 	<li><a href="#"> ホテル一覧</a></li>
+	   	 	<li><a href="#"> よくあるご質問</a></li>
+	   	 	<li><a href="#"> お問い合わせ</a></li>
+	   	 </ul>
+	   </nav>
+   </header>
+   <!--ヘッダー-->
+
+	<!-- ↓メインビジュアルのdiv -->
+	<div class="main-image">
+	   <div class="SNS grid">
+	   <a href="#"><img class="sns-btn" src="images/instagram.png" alt="instagram"></a>
+	   <a href="#"><img class="sns-btn" src="images/twitter.png" alt="twitter"></a>
+	   </div>
+		<h2>暮らすように、泊まろう。</h2>
+		<h3>とびきりの空間で、いつもと同じことを。</h3>
+	    <a class="button" href="#">予約をする</a>
+	</div>
+	<!-- ↑メインビジュアル -->
+    </div>
+
+    <!-- コンセプトのdiv-->
+	<div class="concept-wrapper">
+		<div class="concept-img"> <img src="images/conceptphoto.png"></div>
+		<div class="concept-message">
+		<h4>コンセプト</h4>
+		<p>
+				全国5箇所にある私たちのホテル「KURASU HOTEL」。<br>
+				チェックアウトは14時まで大丈夫。<br>
+				お部屋全てにフルキッチン・家具一式付きです。<br><br>
+
+				なぜなら、「自宅」のような感覚で<br>
+                この滞在を楽しんでいただきたいから。<br><br>
+
+                いつもより贅沢な気持ちで、いつもと同じことをする。<br>
+				たとえば読書。たとえばソファでのお昼寝。<br>
+				そんな体験をしてみませんか。<br><br>
+
+                とびきりの空間をご用意して、お待ちしております。
+		</p>
+	    </div>
+	</div>
+	<!-- ↑コンセプト -->
+
+	<!-- ニュースのdiv -->
+	<div class="news">
+		<h4>お知らせ</h4>
+		<div class="news-comment">
+		<dl>
+	    <dt> 2020年2月 </dt> <dd><a href="#"> 新ホテルOPENのお知らせ </a></dd></p>
+	    <dt> 2020年6月 </dt> <dd><a href="#"> 当ホテルのコロナ感染対策について</a></dd></p>
+	    <dt> 2020年10月 </dt> <dd><a href="#"> Gotoキャンペーンについて | 地域共通クーポン配布開始</a></dd></p>
+	    </dl>
+	    <a class="news-button" href="#">過去のお知らせをみる</a>
+	    </div>
+	</div>
+	<!-- ↑ニュース -->
+
+	<!-- ホテル一覧のdiv -->
+	<div class="hotel">
+		<h4>ホテル一覧</h4>
+		<div class="hoteltype-wrapper">
+		<div class="hoteltype1">
+			<h5>- 都心タイプ -</h5>
+			<a href="#"><figure class="hotel-img" href="#"><img src="images/hoteltype1.png" alt="都心タイプ"></figure></a>
+			 <p>都心の閑静な住宅地の中に位置し、ハイセンスな家具と日当たりを
+				意識した空間があなたを迎えます。ホテルまでのアクセス時間を気にせずに
+				チェックイン・チェックアウトができるため、
+			    時間にとらわれない滞在が可能です。
+			</p>
+			<a class="hotel-button" href="#">全２施設</a>
+		</div>
+        <div class="hoteltype2">
+        	<h5>- 郊外タイプ -</h5>
+			<a href="#"><figure class="hotel-img" href="#"><img src="images/hoteltype2.png" alt="郊外タイプ" href="#"></figure></a>
+			<p> 「別荘」を感じてもらえるように、都心から少し離れた郊外にご用意した建築。
+				自分のお気に入りのものを目一杯持ち込んで、誰にも邪魔されない時間を過ごしたい方におすすめ。
+				ワーケーションにもご利用いただけます。
+			</p>
+			<a class="hotel-button" href="#">全３施設</a>
+		</div>
+	    </div>
+	</div>
+	<!-- ↑ホテル一覧 -->
+
+   <!-- よくあるご質問（FAQ）のdiv -->
+   <div class="FAQ">
+		<h4>よくあるご質問(FAQ)</h4>
+		<div class="wrapper grid">
+			<div class="quiestion">
+			<h5>“チェックイン・チェックアウトの可能時間は？”</h5>
+			<p>チェックインは17時から24時。チェックアウトは10時から14時。余裕を持ってチェックアウト頂けるので、あの朝の時間に追われる慌しさはありません。ごゆっくりご仕度下さい。</p>
+		    </div>
+		    <div class="quiestion">
+			<h5>“お食事は付きますか？”</h5>
+			<p>ご希望の方にはデリバリーサービスがございます。料金には含まれておりませんので、当日ホテルでお頼み下さい。ホテル施設はキッチンが付いておりますので、ご自身でお食事をご用意頂くことももちろん可能です。</p>
+		    </div>
+		    <div class="quiestion">
+			<h5>“いつまでキャンセルできますか？”</h5>
+			<p>チェックイン日の１週間前まで公式サイトにてキャンセルが可能です。</p>
+		    </div>
+		    <div class="quiestion">
+			<h5>“Wi-Fiはついていますか？”</h5>
+			<p>全施設Wi-Fi付きのお部屋となっております。また、お部屋のテレビではNetflix、Amazonprimevideoが無料でご利用頂けます。</p>
+		    </div>
+		    <div class="quiestion">
+			<h5>“最大何泊まで可能ですか？”</h5>
+			<p>基本的には、1泊から7泊まで受け付けております。それ以上の宿泊をご希望される際は、お手数ですが下記お問い合わせフォームにて別途ご連絡をお願い致します。</p>
+		    </div>
+		    <div class="quiestion">
+			<h5>ホテル施設内で洗濯は可能ですか？”</h5>
+			<p>全ホテルにランドリー、乾燥機のご用意がございます。<br>※プール付きの施設には水着用の乾燥機を別途ご用意しております。複数日のご宿泊でも、最小のお荷物でおいで下さい。</p>
+		    </div>
+	    </div>
+     </div>
+    <!-- ↑よくあるご質問 -->
+
+	<!-- お問い合わせのdiv -->
+	<div class="form">
+		<h4>お問い合わせ</h4>
+		<div class="contact-wrapper">
+		<form action="#">
+			<div>
+				<label for="name">お名前</label><br>
+				<input type="text" id="name" name="your-name">
+			</div>
+			<div>
+				<label for="email">メールアドレス</label><br>				
+				<input type="email" id="email" name="your-email">
+			</div>
+			<div>
+				<label for="message">メッセージをどうぞ！</label><br>
+				<textarea id="message" name="your-message"></textarea>
+			</div>
+
+			<input type="submit" class="button" value="送信する">
+	    </form>
+	    </div>
+    </div>
+    <!-- ↑お問い合わせ -->
+
+
+	<!-- footerを設置 -->
+	<footer>
+		@KURASHU HOTEL GROUP
+	</footer>
+	<!-- ↑footer -->
+
+</body>
+
+</html>
+
